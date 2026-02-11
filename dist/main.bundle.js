@@ -1,0 +1,1 @@
+(()=>{const e=document.createElement("div");e.innerHTML='<h2 class="h2">mjfjfnsj</h2>',document.body.appendChild(e)})();

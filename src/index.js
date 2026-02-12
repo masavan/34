@@ -1,4 +1,4 @@
-import './src/main.css';
+import './main.css';
 //import './mas'
 
 const div = document.createElement('div');

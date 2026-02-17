@@ -27,18 +27,33 @@ module.exports = {
     },
     module: {
         rules: [
-            {test: /\.css$/i, use:[MiniCssExtractPlugin.loader, 'css-loader']},
-            {test: /\.ts$/i, loader: 'ts-loader'},
-            {test:  /\.(jpg|png|svg|jpeg|gif)$/,
+            {
+                test: /\.s[ac]ss$/,
+            },
+            {
+                test: /\.css$/i,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.ts$/i,
+                loader: 'ts-loader'
+            },
+            {
+                test:  /\.(jpg|png|svg|jpeg|gif)$/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/images/[name].[contenthash][ext]',
-                }},
-            {test: /\.(woff|woff2|ttf|eot)$/i,
-            type: 'asset/resource',
-            generator: {
-            filename: 'assets/fonts/[name].[contenthash][ext]', }
-             }
+                }
+                },
+            {
+                test: /\.(woff|woff2|ttf|eot)$/i,
+                type: 'asset/resource',
+                generator: {
+                filename: 'assets/fonts/[name].[contenthash][ext]', }
+            }
         ]
     },
     plugins: [
@@ -59,8 +74,7 @@ module.exports = {
         static: {
             directory: path.join(__dirname, 'dist'),
         },
-        compress: true,
-        port: 9000,
+        port: 3000,
         open: true,
         hot: true,
     }
